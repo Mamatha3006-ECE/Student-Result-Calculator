@@ -1,0 +1,125 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  background: #e7e9ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  transition: 0.4s ease;
+}
+
+.container {
+  background: white;
+  padding: 30px 25px;
+  width: 350px;
+  border-radius: 16px;
+  box-shadow: 0px 0px 25px rgba(0,0,0,0.12);
+  animation: pop 0.4s ease;
+}
+
+@keyframes pop {
+  from { transform: scale(0.8); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 18px;
+}
+
+header h2 {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+#toggleTheme {
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Input Boxes */
+input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 14px; /* ✅ Space Between Boxes */
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  transition: 0.3s;
+}
+
+input:focus {
+  border-color: #5b74ff;
+  box-shadow: 0 0 8px rgba(91,116,255,0.5);
+}
+
+/* Button */
+button#calculate {
+  width: 100%;
+  background: #5b74ff;
+  border: none;
+  padding: 12px;
+  border-radius: 8px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: 0.3s;
+}
+
+button#calculate:hover {
+  background: #3e53d9;
+}
+
+/* Result Box */
+.result {
+  margin-top: 18px;
+  padding: 15px;
+  text-align: center;
+  background: #f2f2ff;
+  border-radius: 8px;
+  border-left: 5px solid #5b74ff;
+  display: none;
+}
+
+/* Show result */
+.result.show {
+  display: block;
+  animation: fade 0.5s ease;
+}
+
+@keyframes fade {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* 🌙 Dark Mode */
+body.dark {
+  background: #121212;
+}
+
+body.dark .container {
+  background: #1e1e1e;
+  color: white;
+}
+
+body.dark input {
+  background: #2a2a2a;
+  color: white;
+  border: 1px solid #555;
+}
+
+body.dark .result {
+  background: #2a2a2a;
+  border-left: 5
